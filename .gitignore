@@ -1,0 +1,97 @@
+# Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
+# Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# User-specific stuff:
+.idea
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/.name
+.idea/checkstyle-idea.xml
+.idea/codeStyleSettings.xml
+.idea/compiler.xml
+.idea/encodings.xml
+.idea/kotlinc.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/inspectionProfiles/profiles_settings.xml
+.idea/inspectionProfiles/Project_Default.xml
+.idea/jsLinters/jslint.xml
+.idea/php.xml
+
+# Sensitive or high-churn files:
+.idea/dataSources/
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+# Gradle:
+.idea/gradle.xml
+.idea/libraries
+
+# Mongo Explorer plugin:
+.idea/mongoSettings.xml
+
+# maven projekt files
+22301_IPH3A.iml
+3rdparty/22301_IPH3A.3rdparty.iml
+authentication/22301_IPH3A.authentication.iml
+build-tools/22301_IPH3A.build-tools.iml
+bundles/22301_IPH3A.bundles.iml
+check-core/22301_IPH3A.check-core.iml
+check-ui.apps/22301_IPH3A.check-ui.apps.iml
+core/22301_IPH3A.core.iml
+core-it/22301_IPH3A.core-it.iml
+iph.permissions.author/22301_IPH3A.permissions.author.iml
+iph.permissions.publish/22301_IPH3A.permissions.publish.iml
+it.launcher/22301_IPH3A.it.launcher.iml
+it.tests/22301_IPH3A.it.tests.iml
+ui.apps/22301_IPH3A.ui.apps.iml
+ui.config/22301_IPH3A.ui.config.iml
+ui.content.dev/22301_IPH3A.ui.content.dev.iml
+ui.content/22301_IPH3A.ui.content.iml
+ui.i18n/22301_IPH3A.ui.i18n.iml
+ui.login/22301_IPH3A.ui.login.iml
+ui.taglib/22301_IPH3A.ui.taglib.iml
+webcenter-release/22301_IPH3A_webcenter-release.iml
+
+
+## File-based project format:
+*.iws
+
+## Plugin-specific files:
+
+# IntelliJ
+/out/
+
+# mpeltonen/sbt-idea plugin
+.idea_modules/
+
+# JIRA plugin
+atlassian-ide-plugin.xml
+
+# Crashlytics plugin (for Android Studio and IntelliJ)
+com_crashlytics_export_strings.xml
+crashlytics.properties
+crashlytics-build.properties
+fabric.properties
+
+.settings
+.project
+.classpath
+target
+bin
+/build.properties
+derby.log
+MANIFEST.MF
+.brackets.json
+
+authentication/bin/
+
+pom.xml.versionsBackup
+
+# Visual Studio Code
+.vscode/*
