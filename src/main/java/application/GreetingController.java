@@ -1,5 +1,7 @@
 package application;
 
+import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import javax.jws.WebMethod;
 
@@ -26,8 +28,7 @@ public class GreetingController {
 
   @GetMapping
   public String main(Map<String, Object> model) {
-    Iterable<Message> messages =  messageRepository.findAll();
-    model.put("messages", messages);
+    model.put("messages", getAllMessages());
     return "main";
   }
 
@@ -37,8 +38,7 @@ public class GreetingController {
 
     messageRepository.save(message);
 
-    Iterable<Message> messages =  messageRepository.findAll();
-    model.put("messages", messages);
+    model.put("messages", getAllMessages());
 
     return "main";
   }
@@ -47,5 +47,24 @@ public class GreetingController {
   public String delete(Map<String, Object> model) {
     messageRepository.deleteAll();
     return "main";
+  }
+
+  @PostMapping("/filter")
+  public String filter(@RequestParam String tag, Map<String, Object> model){
+    Iterable<Message> messages;
+    if(tag !=null && !tag.isEmpty()) {
+    messages = messageRepository.findByTag(tag);}
+    else {
+      messages = getAllMessages();
+    }
+
+    model.put("messages", messages);
+    return "main";
+  }
+
+
+  private Iterable<Message> getAllMessages() {
+    Iterable<Message> messages =  messageRepository.findAll();
+    return messages;
   }
 }
