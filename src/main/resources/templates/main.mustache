@@ -8,7 +8,7 @@
     </form>
 </div>
 <div>
-    <form method="post">
+    <form method="post" action="add">
         <input type="text" name="text" placeholder="Insert Message">
         <input type="text" name="tag" placeholder="tag">
         <button type="submit">Add</button>
@@ -22,6 +22,13 @@
         <input type="hidden" name="_csrf" value="{{_csrf.token}}">
     </form>
 </div>
+<div>
+    <form method="get" action="filterStart">
+        <input type="text" name="starting" placeholder="Filter messages starting with">
+        <button type="submit">Filter</button>
+    </form>
+</div>
+
 <div>Список сообщений</div>
 {{#messages}}
     <li>
