@@ -13,7 +13,7 @@
     <div>
         <form action="/logout" method="post">
             <input type="submit" value="Sign Out"/>
-            <input type="hidden" name="_csrf" value="{{_csrf.token}}">
+            <input type="hidden" name="_csrf" value="${_csrf.token}">
         </form>
     </div>
 </#macro>
