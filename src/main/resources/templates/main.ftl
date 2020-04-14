@@ -5,16 +5,17 @@
     <@l.logout/>
     <span><a href="/user">User List</a> </span>
     <div>
-        <form method="post" action="/add">
+        <form method="post" action="/add" enctype="multipart/form-data">
             <input type="text" name="text" placeholder="Insert Message">
             <input type="text" name="tag" placeholder="tag">
+            <input type="file" name="file">
             <button type="submit">Add</button>
             <input type="hidden" name="_csrf" value="${_csrf.token}">
         </form>
     </div>
     <div>
         <form method="get" action="/main">
-            <input type="text" name="filter" value="${filter}" placeholder="Filter messages">
+            <input type="text" name="filter" value="${filter?if_exists}" placeholder="Filter messages">
             <button type="submit">Find</button>
         </form>
     </div>
@@ -27,13 +28,18 @@
         <i>${message.tag}</i></ul>
         <strong>${message.authorName}</strong>
         <div>
+            <#if message.filename??>
+              <img src="/img/${message.filename}">
+            </#if>
+        </div>
+        <div>
     <#else>
         No messages
     </#list>
 
 
-    <form method="post" action="delete">
+    <form method="post" action="/delete">
+        <input type="hidden" name="_csrf" value="${_csrf.token}">
         <button type="submit">Delete all messages</button>
-        <input type="hidden" name="_csrf" value="{{_csrf.token}}">
     </form>
 </@c.page>
